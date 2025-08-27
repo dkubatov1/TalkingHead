@@ -12,6 +12,11 @@ export HF_ENDPOINT=https://hf-mirror.com
 echo "Start download models from HuggingFace mirror site"
 
 # Download Whisper weights
+hf download  TMElyralab/MuseTalk \
+  --local-dir $CheckpointsDir/musetalk-1.5 \
+  --include "musetalkV15/musetalk.json" "musetalkV15/unet.pth"
+
+# Download Whisper weights
 hf download openai/whisper-tiny \
   --local-dir $CheckpointsDir/whisper \
   --include "config.json" "pytorch_model.bin" "preprocessor_config.json"
