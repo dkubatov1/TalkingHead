@@ -1,6 +1,6 @@
-#! bash
+#!/bin/bash
 
-CheckpointsDir = "./pretrained_models"
+CheckpointsDir="./pretrained_models"
 
 mkdir "pretrained_models"
 
@@ -28,12 +28,12 @@ hf download ByteDance/LatentSync-1.6 \
 
 # Download DWPose weights
 hf download yzd-v/DWPose \
-    --local-dir $CheckpointsDir\dwpose \
+    --local-dir $CheckpointsDir/dwpose \
     --include "dw-ll_ucoco_384.pth"
 
 # Download Face Parse Bisent and ResNet weights
 hf download ManyOtherFunctions/face-parse-bisent \
-    --local-dir $CheckpointsDir\face-parse-bisent \
+    --local-dir $CheckpointsDir/face-parse-bisent \
     --include "79999_iter.pth" "resnet18-5c106cde.pth"
 
 if [ $? -ne 0 ]; then
