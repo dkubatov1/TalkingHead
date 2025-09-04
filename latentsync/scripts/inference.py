@@ -17,10 +17,10 @@ import os
 from omegaconf import OmegaConf
 import torch
 from diffusers import AutoencoderKL, DDIMScheduler
-from latentsync.models.unet import UNet3DConditionModel
-from latentsync.pipelines.lipsync_pipeline import LipsyncPipeline
+from models.unet import UNet3DConditionModel
+from pipelines.lipsync_pipeline import LipsyncPipeline
 from accelerate.utils import set_seed
-from latentsync.whisper.audio2feature import Audio2Feature
+from whisper.audio2feature import Audio2Feature
 from DeepCache import DeepCacheSDHelper
 
 
