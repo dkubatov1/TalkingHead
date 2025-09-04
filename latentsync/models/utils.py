@@ -11,7 +11,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+def zero_rank_log(logger, message: str):
+    if dist.is_initialized() and dist.get_rank() == 0:
+        logger.info(message)
+        
 def zero_module(module):
     # Zero out the parameters of a module and return it.
     for p in module.parameters():
