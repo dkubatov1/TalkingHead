@@ -24,7 +24,7 @@ from .unet_blocks import (
 )
 from .resnet import InflatedConv3d, InflatedGroupNorm
 
-from .utils.util import zero_rank_log
+from .utils import zero_rank_log
 from .utils import zero_module
 
 
